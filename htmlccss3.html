@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>List with Floating Headings</title>
+  <style>
+    .floating-heading {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      padding: 10px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the list */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+   
+    li {
+      margin-bottom: 20px;
+    }
+
+    
+    .content {
+      height: 200px;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-heading">
+    Heading 1
+  </div>
+  <ul>
+    <li>
+      <div class="content">
+        Section 1 content
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        Section 2 content
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        Section 3 content
+      </div>
+    </li>
+  </ul>
+
+  <div class="floating-heading">
+    Heading 2
+  </div>
+  <ul>
+    <li>
+      <div class="content">
+        Section 4 content
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        Section 5 content
+      </div>
+    </li>
+    <li>
+      <div class="content">
+        Section 6 content
+      </div>
+    </li>
+  </ul>
+</body>
+</html>

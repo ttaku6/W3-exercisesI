@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the perspective transform and hover animation */
+    .box {
+      width: 200px;
+      height: 200px;
+      perspective: 800px;
+    }
+
+    .box:hover .content {
+      transform: rotateY(180deg);
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .front {
+      background-color: #ff263238;
+    }
+
+    .back {
+      background-color: #888888;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="content">
+      <div class="front">
+        <h2>Hi i am Taku Jakarasi</h2>
+      </div>
+      <div class="back">
+        <h2>I am an aspiring software developer</h2>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

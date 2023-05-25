@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Custom Hover and Focus Effect for Navigation</title>
+  <style>
+    /* Style for the navigation */
+    nav {
+      background-color: #ff263238;
+      padding: 20px;
+    }
+
+    /* Style for the navigation list */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Style for the navigation items */
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    /* Style for the navigation links */
+    a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    /* Custom hover effect */
+    a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Custom focus effect */
+    a:focus {
+      outline: none;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

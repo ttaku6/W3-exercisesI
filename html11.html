@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* CSS for the typewriter animation */
+    .typewriter {
+      overflow: hidden; /* Ensures the content is hidden until the animation starts */
+      border-right: .15em solid orange; /* Vertical cursor */
+      white-space: nowrap; /* Keeps the text in a single line */
+      margin: 0 auto; /* Centers the element horizontally */
+      letter-spacing: .15em; /* Adjusts the spacing between letters */
+      animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    
+    /* Keyframes for the typing animation */
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    /* Keyframes for the blinking cursor */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange; }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="typewriter">Welcome to Typewriter Animation!</h1>
+
+  <script>
+    // JavaScript to start the typewriter effect on page load
+    window.onload = function() {
+      var elements = document.getElementsByClassName('typewriter');
+      for (var i = 0; i < elements.length; i++) {
+        var text = elements[i].innerHTML;
+        elements[i].innerHTML = '';
+
+        var node = document.createElement('span');
+        elements[i].appendChild(node);
+
+        var j = 0;
+        var speed = 100; // Adjust the typing speed (in milliseconds) here
+
+        function type() {
+          if (j < text.length) {
+            node.innerHTML += text.charAt(j);
+            j++;
+            setTimeout(type, speed);
+          }
+        }
+
+        type();
+      }
+    };
+  </script>
+</body>
+</html>

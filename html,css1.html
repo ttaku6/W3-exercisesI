@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Styled Checkboxes with Animation</title>
+  <style>
+    /* Style for the checkbox container */
+    .checkbox-container {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    /* Hide the default checkboxes */
+    .checkbox-container input[type="checkbox"] {
+      display: none;
+    }
+
+    /* Style for the custom checkboxes */
+    .checkbox-container .custom-checkbox {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      position: relative;
+    }
+
+   {
+      background-color: #2196F3;
+    }
+
+    /* Animation for the custom checkboxes when checked */
+    .checkbox-container input[type="checkbox"]:checked + .custom-checkbox::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 5px;
+      height: 10px;
+      border: solid #fff;
+      border-width: 0 2px 2px 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    /* Show the checkmark animation */
+    .checkbox-container input[type="checkbox"]:checked + .custom-checkbox::after {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="custom-checkbox"></span>
+    Apples
+  </label>
+
+  <label class="checkbox-container">
+    <input type="checkbox">
+    <span class="custom-checkbox"></span>
+    Bananas
+  </label>
+</body>
+</html>
